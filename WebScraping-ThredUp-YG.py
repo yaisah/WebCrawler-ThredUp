@@ -49,13 +49,13 @@ for container in results:
     linkurl = ("https://www.thredup.com"+ link)
     print(linkurl)
 
-##Post the record to desired database
-myquery = "INSERT INTO ygranill.ThredUp(Brand, itemtitle, size, price, MSRP, link) VALUES (%s, %s, %s, %s, %s, %s);"
-arguments = (brand, item, size, price, msrp, linkurl)
+    ##Post the record to desired database
+    myquery = "INSERT INTO ygranill.ThredUp(Brand, itemtitle, size, price, MSRP, link) VALUES (%s, %s, %s, %s, %s, %s);"
+    arguments = (brand, item, size, price, msrp, linkurl)
 
-##Execute the query
-c.execute(myquery, arguments)
-conn.commit()
+    ##Execute the query
+    c.execute(myquery, arguments)
+    conn.commit()
 
 print("Done!")
 
